@@ -1,0 +1,46 @@
+
+<hr />
+
+<section>
+
+  <div class="row">
+      <div class="col-md-1">
+          <b>Users using Observable</b>
+          <ul *ngIf="users">
+            <li *ngFor="let usr of users"> {{ usr.name }} </li>
+          </ul>
+      </div>
+      <div class="col-md-2">
+          <h4>BehaviorSubject</h4>
+          <p><button (click)="getUsersSubject()"> Subscribe to The Subject </button></p>
+        
+        <ul *ngIf="subjectObservableData">
+          <li *ngFor="let usr1 of subjectObservableData"> {{ usr1.length }}  </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>BehaviorSubject</h4>
+        <p><button (click)="getUsersBehaviorSubject()"> Subscribe to The BehaviorSubject </button></p>
+        <br />
+        <ul>
+          <li *ngFor="let data of behaviorSubjectObservableData">{{ data.length }}</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>ReplaySubject</h4>
+        <p><button (click)="getUsersReplySubject()"> Subscribe to The ReplaySubject </button></p>
+        <br />
+        <ul>
+          <li *ngFor="let data of replaySubjectObservableData">{{ data.length }}</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+          <h4>AsyncSubject</h4>
+          <p><button (click)="getUsersAsyncSubject()"> Subscribe to The AsyncSubject </button></p>
+          <br />
+          <ul>
+            <li *ngFor="let data of asyncSubjectObservableData">{{ data.length }}</li>
+          </ul>
+        </div>
+  </div>
+</section>
